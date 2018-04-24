@@ -12,8 +12,7 @@
 
 	<h1>Mantenimiento de personas</h1>
 	<h:form>
-		<h:dataTable var="per" value="#{personasManagedBean.personas}"
-			border="1">
+		<h:dataTable var="per" value="#{personasManagedBean.personas}" border="1">
 			<h:column>
 				<f:facet name="header">
 					Nombre
@@ -37,7 +36,7 @@
 					Acciones
 				</f:facet>
 				<h:commandButton value="Editar" />
-				<h:commandButton value="Eliminar" />
+				<h:commandButton value="Eliminar" actionListener="#{personasManagedBean.eliminar(per)}"/>
 			</h:column>
 		</h:dataTable>
 	</h:form>

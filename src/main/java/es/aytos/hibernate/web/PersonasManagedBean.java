@@ -23,6 +23,10 @@ public class PersonasManagedBean implements Serializable{
 	public void inicializar() {
 		this.personas = RepositorioPersona.consultar("", "", "", null);
 	}
+	
+	public void eliminar(final Persona persona) {
+		RepositorioPersona.eliminarPersona(persona.getIdUsuario());
+	}
 
 	public List<Persona> getPersonas() {
 		return personas;
